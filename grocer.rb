@@ -123,7 +123,8 @@ def checkout(cart, coupons)
   while index < cart.length do
     
     if cart[index][:clearance]
-    total += cart[index][:price] * cart[index][:count]
+      total += cart[index][:price] * cart[index][:count]
+    end
     
     index += 1
   end
