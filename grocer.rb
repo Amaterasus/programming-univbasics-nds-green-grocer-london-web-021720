@@ -75,6 +75,12 @@ def update_cart_with_coupon(cart, coupon, item_index)
   return cart
 end
 
+def coupon_hash(coupon)
+  {
+    :item : ""
+  }
+end
+
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
