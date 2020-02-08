@@ -62,6 +62,7 @@ def check_coupon(cart, coupon)
     if item[:item] == coupons[:item] && item[:count] >= coupons[:num]
       return true
     end
+    index += 1
   end
   return false
 end
