@@ -114,7 +114,7 @@ def checkout(cart, coupons)
   # some irritated customers
   
   index = 0
-  float = 0.00
+  total = 0.00
   
   cart = consolidate_cart(cart)
   cart = apply_coupons(cart, coupons)
@@ -122,11 +122,10 @@ def checkout(cart, coupons)
   
   while index < cart.length do
     
-    float += cart[index][:price] * cart[index][:count]
+    total += cart[index][:price] * cart[index][:count]
     
     index += 1
   end
   
-  
-  
+  return total
 end
