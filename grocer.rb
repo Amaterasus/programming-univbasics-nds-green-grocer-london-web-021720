@@ -60,7 +60,7 @@ def check_coupon(cart, coupon)
   
   while index < cart.length do
     item = cart[index]
-    if item[:item] == coupon[:item] && item[:count] >= coupons[:num]
+    if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
       return index
     end
     index += 1
