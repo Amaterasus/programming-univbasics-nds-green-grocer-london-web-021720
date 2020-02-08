@@ -2,6 +2,15 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
+  index = 0
+  
+  while index < collection.length do 
+    if collection[index][:item] == name
+      return collection[index]
+    end
+    index += 1
+  end
+  return nil
 end
 
 def consolidate_cart(cart)
@@ -9,6 +18,21 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  consolidated = []
+  index = 0
+  
+  while index < cart.length do
+    item = find_item_by_name_in_collection(cart[index][:name], cart)
+    if !item
+      consolidated[cart[index][:name]][:count] = 1
+    else
+      item[:count] += 1
+    end
+    
+    index += 1
+  end
+  
+  return consolidated
 end
 
 def apply_coupons(cart, coupons)
