@@ -44,8 +44,8 @@ def apply_coupons(cart, coupons)
   index = 0
   
   while index < cart.length do
-    item = cart
-    if cart[index][:item] = coupons[:item] && cart[index]
+    item = cart[index]
+    if item[:item] == coupons[:item] && item[:count] == 
       
     end
     
