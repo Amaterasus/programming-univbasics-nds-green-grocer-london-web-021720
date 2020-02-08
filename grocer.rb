@@ -127,5 +127,9 @@ def checkout(cart, coupons)
     index += 1
   end
   
+  if total > 100
+    total * 0.9
+  end
+  
   return total
 end
