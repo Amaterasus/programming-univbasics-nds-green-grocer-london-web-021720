@@ -52,7 +52,7 @@ def apply_coupons(cart, coupons)
     
     index += 1
   end
-  
+  return cart
 end
 
 def check_coupon(cart, coupon)
