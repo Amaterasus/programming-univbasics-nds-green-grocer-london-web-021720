@@ -79,7 +79,7 @@ end
 def coupon_hash(coupon, item)
   {
     :item => "#{coupon[:item]} W/COUPON",
-    :price => coupon[:price].to_i / 2,
+    :price => coupon[:price],
     :clearance => item[:clearance],
     :count => coupon[:num]
   }
