@@ -47,7 +47,7 @@ def apply_coupons(cart, coupons)
     current_coupon = coupon[index]
     item_index = check_coupon(cart, current_coupon)
     if item_index
-      cart = update_cart_with_coupon(cart, current_coupon)
+      cart = update_cart_with_coupon(cart, current_coupon, item_index)
     end
     
     index += 1
@@ -68,7 +68,7 @@ def check_coupon(cart, coupon)
   return false
 end
 
-def update_cart_with_coupon(cart, coupon)
+def update_cart_with_coupon(cart, coupon, item_index)
   
   
   
