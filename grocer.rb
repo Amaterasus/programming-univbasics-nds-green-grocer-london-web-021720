@@ -77,9 +77,12 @@ def update_cart_with_coupon(cart, coupon, item_index)
 end
 
 def coupon_hash(coupon, item)
+  coupon_price = coupon[:price]
+  coupon_number = coupon[:num]
+  price = coupon_price / coupon_number
   {
     :item => "#{coupon[:item]} W/COUPON",
-    :price => coupon[:price],
+    :price => price,
     :clearance => item[:clearance],
     :count => coupon[:num]
   }
