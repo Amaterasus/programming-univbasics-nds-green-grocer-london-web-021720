@@ -113,9 +113,19 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
+  index = 0
+  float = 0.00
+  
   cart = consolidate_cart(cart)
   cart = apply_coupons(cart, coupons)
   cart = apply_clearance(cart)
+  
+  while index < cart.length do
+    
+    float += cart[index][:price] * cart[index][:count]
+    
+    index += 1
+  end
   
   
   
