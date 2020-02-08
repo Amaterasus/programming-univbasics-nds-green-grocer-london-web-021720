@@ -124,6 +124,8 @@ def checkout(cart, coupons)
     
     if cart[index][:clearance]
       total += cart[index][:price] * cart[index][:count]
+    else
+      total += cart[index][:price]
     end
     
     index += 1
