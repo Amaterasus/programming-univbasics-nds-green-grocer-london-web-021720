@@ -45,7 +45,7 @@ def apply_coupons(cart, coupons)
   
   while index < coupons.length do
     item = cart[index]
-    if item[:item] == coupons[:item] && item[:count] >= coupons[:num]
+    
       item[count] -= coupons[:num]
       
       
@@ -57,7 +57,15 @@ def apply_coupons(cart, coupons)
 end
 
 def check_coupon(cart, coupon)
+  index = 0
   
+  while index < cart.length do
+    
+    item = cart[index]
+    if item[:item] == coupons[:item] && item[:count] >= coupons[:num]
+      return true
+  end
+  return false
 end
 
 def update_cart_with_coupon(cart, coupon)
