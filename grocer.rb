@@ -58,7 +58,6 @@ def check_coupon(cart, coupon)
   index = 0
   
   while index < cart.length do
-    
     item = cart[index]
     if item[:item] == coupons[:item] && item[:count] >= coupons[:num]
       return true
