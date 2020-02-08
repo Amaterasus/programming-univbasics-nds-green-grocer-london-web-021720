@@ -68,6 +68,9 @@ end
 
 def update_cart_with_coupon(cart, coupon)
   
+  
+  
+  return cart
 end
 
 def apply_clearance(cart)
