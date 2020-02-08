@@ -45,12 +45,18 @@ def apply_coupons(cart, coupons)
   
   while index < cart.length do
     item = cart[index]
-    if item[:item] == coupons[:item] && item[:count] == coupons[:num]
+    if item[:item] == coupons[:item] && item[:count] >= coupons[:num]
+      item[count] -= coupons[:num]
+      
       
     end
     
     index += 1
   end
+  
+end
+
+def update_cart_with_coupon(cart, coupon)
   
 end
 
