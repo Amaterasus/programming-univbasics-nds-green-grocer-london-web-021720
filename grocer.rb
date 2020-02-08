@@ -69,8 +69,9 @@ def check_coupon(cart, coupon)
 end
 
 def update_cart_with_coupon(cart, coupon, item_index)
+  cart[item_index][:count] -= coupon[:num]
   
-  
+  cart.push(coupon_hash(coupon))
   
   return cart
 end
