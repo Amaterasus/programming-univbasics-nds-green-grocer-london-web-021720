@@ -44,9 +44,9 @@ def apply_coupons(cart, coupons)
   index = 0
   
   while index < coupons.length do
-    
+    current_coupon = coupon[index]
     if check_coupon(cart, coupons[index])
-      
+      update_cart_with_coupon(cart, coupons[index])
     end
     
     index += 1
